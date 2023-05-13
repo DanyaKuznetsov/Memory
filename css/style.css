@@ -1,0 +1,136 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center center;
+    background: linear-gradient(125deg, rgb(93, 93, 248), rgb(237, 96, 120));
+    background-repeat: no-repeat;
+    background-size: 400% 400%;
+    animation: bg 10s infinite alternate-reverse;
+    position: relative;
+}
+
+@keyframes bg {
+    0% {
+        background-position: left top;
+    }
+
+    100% {
+        background-position: right bottom;
+    }
+}
+
+.board {
+    background: white;
+    width: 90vw;
+    height: 90vw;
+    max-width: 600px;
+    max-height: 600px;
+    box-shadow: 0px 0px 24px rgba(128, 128, 128, 0.723);
+    border-radius: 16px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 8px;
+    padding: 8px;
+}
+
+.board__item {
+    border: solid 1px black;
+    border-radius: 10px;
+    transition: all 0.4s;
+    cursor: pointer;
+    background-image: url(../img/back.jpg);
+    background-size: cover;
+    background-position: center;
+    transform-style: preserve-3d;
+    /*определяет положение дочернего элемента в 3D-пространстве или в той же плоскости, что и родительский элемент.*/
+    overflow: hidden;
+    /*определяет, необходимо ли для переполненного блочного элемента содержимое обрезать, предоставить полосы прокрутки или просто отобразить.*/
+}
+
+.flip {
+    transform: perspective(300px) rotateY(180deg);
+    pointer-events: none;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    transform: perspective(300px) rotateY(180deg);
+    backface-visibility: hidden;
+    /*определяет, видно ли заднюю грань элемента, когда он повёрнут к пользователю.*/
+    transition: all 0.2s;
+}
+
+.flip img {
+    transform: perspective(300px) rotateY(0deg);
+}
+
+.wrapper {
+    background: rgba(0, 0, 0, 0.189);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 5;
+    transition: all 0.5s;
+}
+.wrapper__menu, .win, .lose{
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+legend{
+    font-size: 16px;
+    font-weight: 600;
+}
+.wrapper_hide{
+    opacity: 0;
+    visibility: hidden;
+}
+fieldset {
+    border: solid 2px palevioletred;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+select {
+    border: solid 2px palevioletred;
+    border-radius: 10px;
+    padding: 10px;
+    height: 50px;
+}
+button {
+    background: palevioletred;
+    padding: 10px;
+    border-radius: 10px;
+    height: 50px;
+    color: aliceblue;
+    font-size: 20px;
+}
+.time{
+    position: fixed;
+    background: white;
+    border-radius: 0 0 10px 10px;
+    top: 0;
+    padding: 10px;
+    font-size: 20px;
+}
+span{
+    font-weight: 900;
+}
+._hide{
+    opacity: 0;
+    visibility: hidden;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Найди пару</title>
+    <link rel="stylesheet" href="./css/zero.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./audio/negative_beeps-6008.mp3">
+</head>
+<body>
+    <div class="time">
+        Осталось: <span>0</span>
+    </div>
+    <div class="board">
+        <div class="board__item">
+            <img src="./img/front1.webp" alt="">
+        </div>
+        <div class="board__item">
+            <img src="./img/front1.webp" alt="">
+        </div>
+        <div class="board__item">
+            <img src="./img/front2.webp" alt="">
+        </div>
+        <div class="board__item">
+            <img src="./img/front2.webp" alt="">
+        </div>
+        <div class="board__item">
+            <img src="./img/front3.webp" alt="">
+        </div>
+        <div class="board__item">
+            <img src="./img/front3.webp" alt="">
+        </div>
+        <div class="board__item">
+            <img src="./img/front4.webp" alt="">
+        </div>
+        <div class="board__item">
+            <img src="./img/front4.webp" alt="">
+        </div>
+        <div class="board__item">
+            <img src="./img/front5.webp" alt="">
+        </div>
+        <div class="board__item">
+            <img src="./img/front5.webp" alt="">
+        </div>
+        <div class="board__item">
+            <img src="./img/front6.webp" alt="">
+        </div>
+        <div class="board__item">
+            <img src="./img/front6.webp" alt="">
+        </div>
+        <div class="board__item">
+            <img src="./img/front7.webp" alt="">
+        </div>
+        <div class="board__item">
+            <img src="./img/front7.webp" alt="">
+        </div>
+        <div class="board__item">
+            <img src="./img/front8.webp" alt="">
+        </div>
+        <div class="board__item">
+            <img src="./img/front8.webp" alt="">
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="win _hide">
+            <fieldset>
+                <legend>ПОБЕДА</legend>
+                <button class="again">Начать заново</button>
+            </fieldset>
+        </div>
+        <div class="lose _hide">
+            <fieldset>
+                <legend>ПОРАЖЕНИЕ</legend>
+                <button class="again2">Начать заново</button>
+            </fieldset>
+        </div>
+        <div class="wrapper__menu">
+            <fieldset>
+                <legend>MEMORY</legend>
+                <label for="">Выберите уровень сложности</label>
+                <select name="" id="">
+                    <option value="63">Лёгкий (63 секунды)</option>
+                    <option value="47">Средний (47 секунд)</option>
+                    <option value="32">Сложный (32 секунды)</option>
+                </select>
+                <button id="start">
+                    Начать
+                </button>
+            </fieldset>
+        </div>
+    </div>
+    <script src="BrunoAce-Regular.ttf" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
